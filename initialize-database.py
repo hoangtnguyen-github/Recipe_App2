@@ -4,11 +4,12 @@ import os
 from dotenv import load_dotenv
 
 ## necessary for python-dotenv ##
-APP_ROOT = os.path.join(os.path.dirname(__file__), '..')   # refers to application_top
-dotenv_path = os.path.join(APP_ROOT, '.env')
-load_dotenv(dotenv_path)
+##APP_ROOT = os.path.join(os.path.dirname(__file__), '..')   # refers to application_top
+##dotenv_path = os.path.join(APP_ROOT, '.env')
+##load_dotenv(dotenv_path)
 
-mongo = os.getenv('MONGO')
+##mongo = os.getenv('MONGO')
+mongo = "mongodb+srv://recipe-app:SSRHlTHHJ6mw78fq@cluster0.zihvr.mongodb.net/recipe_app?retryWrites=true&w=majority"
 
 client = pymongo.MongoClient(mongo)
 
@@ -69,7 +70,7 @@ def initial_database():
     user = add_role('user')
 
     # add users
-    mike = add_user('Mike', 'Colbert', 'mike@mike.com', 'abc123', 'admin')
+    hoang = add_user('Hoang', 'Nguyen', 'hoang@hoang.com', 'abc123', 'admin')
 
     # add categories
     main = add_category('Main dishes')
@@ -79,7 +80,7 @@ def initial_database():
    
     # add recipe
     chicken_parmesean = add_recipe('Chicken Parmesean', 'Main dishes',
-                                   'chicken', 'cook it good', 'cook it real good', 'Mike', 'Colbert')
+                                   'chicken', 'cook it good', 'cook it real good', 'Hoang', 'Nguyen')
 
 
 def main():
