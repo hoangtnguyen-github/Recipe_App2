@@ -30,7 +30,8 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 ##load_dotenv(dotenv_path)
 
 ##mongo = os.getenv('MONGO')
-mongo = "mongodb+srv://recipe-app:SSRHlTHHJ6mw78fq@cluster0.zihvr.mongodb.net/recipe_app?retryWrites=true&w=majority"
+mongo = "mongodb+srv://recipe-app:7w5VtWbMea2snUFJ@cluster0.zihvr.mongodb.net/recipe_app?retryWrites=true&w=majority"
+SECRET_KEY = "123eargdagadsgasdf"
 
 client = pymongo.MongoClient(mongo)
 
